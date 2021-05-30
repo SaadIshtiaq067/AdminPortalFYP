@@ -1,0 +1,52 @@
+.dashboard-page-body {
+  background-color: white;
+  padding-top: 15%;
+  padding-left: 25%;
+
+}
+
+.number-div {
+  width: 15%;
+  margin-left: 7%;
+  padding: 1%;
+  text-align: center;
+  display: inline-block;
+  background-color: white;
+  border-radius: 10px;
+  padding-bottom: 0px;
+  padding-left: 0px;
+  color: #b4d1e3;;
+  box-shadow: 10px 10px 10px rgba(150, 150, 150, 0.527);
+  transition-duration: 0.3s;
+}
+.number-count {
+  font-size: 30;
+  font-weight: 200;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.number-heading {
+  background-color: #b4d1e3;
+  color: white;
+  margin-bottom: 0px;
+  margin-left: 0px;
+  padding: 5%;
+  width: 97%;
+  font-size: large;
+  font-weight: 200;
+  font-family: Arial, Helvetica, sans-serif;
+  border-bottom-left-radius: 7px;
+  border-bottom-right-radius: 7px;
+}
+
+/* .number-div:hover {
+  background-color: #009688;
+  color: white;
+  transition-duration: 0.3s;
+} */
+
+.number-icon {
+  margin-right: 10px;
+}
+
+

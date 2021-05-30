@@ -1,0 +1,95 @@
+.name {
+  margin-right: 1%;
+}
+
+/* .restaurant {
+  margin-left: 1%;
+} */
+
+.email {
+  margin-left: 1%;
+}
+
+.phoneNumber {
+  margin-left: 1%;
+}
+
+.notes {
+  margin-left: 1%;
+}
+
+.name,
+
+.email,
+.phoneNumber,
+.notes {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 15px;
+}
+
+.name,
+.email,
+.phoneNumber,
+.notes {
+  width: 50%;
+}
+
+/* .login {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+} */
+
+
+.wrapper {
+  align-items: center;
+  background-color: #b4d1e3;
+  color: #fff;
+  border-radius: 30px;
+  width: 90%;
+  height: 80%;
+  margin-top: 1em;
+  font-size: 1em;
+  font-weight: lighter;
+  letter-spacing: 1px;
+  margin-bottom: 1em;
+  margin-right: 1em;
+  margin-left: 4em;
+  box-shadow: black;
+}
+.form-wrapper-right-form {
+  align-items: center;
+  color: #fff;
+  width: 50%;
+  height: 40%;
+  margin-top: 1em;
+  font-size: 1em;
+  font-weight: lighter;
+  letter-spacing: 1px;
+  margin-bottom: 4em;
+  margin-right: 1em;
+  margin-left: 4em;
+  box-shadow: black;
+}
+/* .page-heading {
+  align-items: center;
+  color: #fff;
+  margin-top: 1em;
+  font-size: 1em;
+  font-weight: lighter;
+  letter-spacing: 1px;
+} */
+
+/* .login button:hover {
+  color: #b4d1e3;
+  background-color: #fff;
+  border: 2px solid #519e8a;
+} */
+/* 
+.login small {
+  color: #999;
+  font-weight: lighter;
+} */
+
