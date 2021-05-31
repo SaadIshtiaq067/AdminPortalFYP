@@ -78,30 +78,16 @@ function ViewUsers() {
     );
   };
 
-  useEffect(() => {
-    axios
-      .get("https://smart-farming-backend.herokuapp.com/farmer")
-      .then((response) => {
-        // this.setState({ todos: response.data });
-        setTodos(response.data);
-        setCurrentResults(response.data);
-        console.log(response);
-      })
-      .catch(function (error) {
-        console.log(error);
-      });
-  }, []);
-
   const deleteUser = (uname) => {
     if (!window.confirm("Are you sure you wish to delete this item?")) {
       return;
     }
     console.log("Clicked");
     axios
-      .delete("https://smart-farming-backend.herokuapp.com/farmer/" + uname)
+      .delete("" + uname)
       .then((response) => {
         if (response.data.status === 1) {
-          alert.show("Farmer Deleted Successfully", { title: "Success" });
+          alert.show("Patient Deleted Successfully", { title: "Success" });
         } else {
           alert.show("Some Error Occured. Not Deleted", { title: "Failure" });
           console.log(response);
@@ -145,9 +131,6 @@ function ViewUsers() {
       );
     });
 
-    // return this.state.todos.map(function(currentTodo, i) {
-    //     return <Todo todo={currentTodo} key={i} />;
-    // });
   };
 
   return (

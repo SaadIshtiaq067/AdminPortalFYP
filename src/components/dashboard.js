@@ -2,7 +2,6 @@ import React from "react";
 import { Doughnut } from "react-chartjs-2";
 import "./dashboard.css";
 import DataTable from "react-data-table-component";
-import ListItemLink from "./ListItemLink";
 
 import Axios from "axios";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -37,7 +36,7 @@ class Dashboard extends React.Component {
 
     // Fetching Stats Data
     Axios.get(
-      "https://smartfarmingnodeserver.herokuapp.com/dashboard/getStats"
+      ""
     ).then((response) => {
       console.log("Stats Response");
       console.log(response);
@@ -47,7 +46,7 @@ class Dashboard extends React.Component {
       });
     });
 
-    Axios.get("https://smartfarmingnodeserver.herokuapp.com/feedback")
+    Axios.get("")
       .then((response) => {
         this.setState({
           latestDetections: response.data.results,
@@ -60,7 +59,7 @@ class Dashboard extends React.Component {
       });
 
     Axios.get(
-      "https://smartfarmingnodeserver.herokuapp.com/feedback/plantreport",
+      "",
       { headers: headers }
     ) //check the localhost link
 

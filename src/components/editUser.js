@@ -229,17 +229,7 @@ class EditUser extends Component {
 
     return (
       <div className="wrapper">
-        {/* <div className="image-add-form-left">
-          <img
-            className="form-side-image"
-            src={
-              this.state.selectedFileURL != ""
-                ? this.state.selectedFileURL
-                : require("../assets/pest-image.png")
-            }
-            alt="Plant"
-          />
-        </div> */}
+      
         <div className="form-wrapper-right-form">
           <h1 className="page-heading">Edit User</h1>
           <form onSubmit={this.handleSubmit} noValidate>

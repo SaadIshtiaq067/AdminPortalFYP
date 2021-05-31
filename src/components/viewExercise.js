@@ -21,14 +21,14 @@ function ViewExercise() {
   const columns = [
  
     {
-      name: "Exercise Name",
-      selector: "exerciseName",
+      name: "Questionnaire",
+      selector: "QuesName",
       sortable: true,
       maxWidth: "20%",
     },
     {
       name: "Type",
-      selector: "season",
+      selector: "type",
       sortable: true,
     },
     {
@@ -38,7 +38,7 @@ function ViewExercise() {
       maxWidth: "5%",
       cell: (row) => (
         <div>
-          <Link to={"/item/plant/" + row._id}>
+          <Link to={"//" + row._id}>
             <button className="table-view-button table-button">
               <FontAwesomeIcon
                 className="view-icon table-button-icon"
@@ -56,7 +56,7 @@ function ViewExercise() {
       maxWidth: "5%",
       cell: (row) => (
         <div>
-          <Link to={"/editPlant/" + row._id}>
+          <Link to={"//" + row._id}>
             <button className="table-edit-button table-button">
               <FontAwesomeIcon
                 className="view-icon table-button-icon"
@@ -95,10 +95,10 @@ function ViewExercise() {
   const deleteExercise = (id) => {
     console.log("Clicked");
     axios
-      .delete("https://smart-farming-backend.herokuapp.com/plant/" + id)
+      .delete("" + id)
       .then((response) => {
         if (response.data.status === 1) {
-          alert.show("Plant Deleted Successfully");
+          alert.show("Question Deleted Successfully");
         } else {
           alert.show("Some Error Occured. Not Deleted");
         }
@@ -109,19 +109,6 @@ function ViewExercise() {
       });
   };
 
-  // useEffect(() => {
-  //   axios
-  //     .get("https://smart-farming-backend.herokuapp.com/plant/")
-  //     .then((response) => {
-  //       setTodos(response.data);
-  //       setCurrentResults(response.data);
-  //       // console.log(response.data);
-  //     })
-
-  //     .catch(function (error) {
-  //       console.log(error);
-  //     });
-  // }, []);
 
   const onSearchHandler = (event) => {
     var query = event.target.value.toLowerCase();
@@ -129,7 +116,6 @@ function ViewExercise() {
       todos.filter(
         (x) =>
           x.plantName.toLowerCase().includes(query) ||
-          // x.description.toLowerCase().includes(query) ||
           x.season.toLowerCase().includes(query)
       )
     );
@@ -138,7 +124,13 @@ function ViewExercise() {
   return (
     <div className="view-page-body">
       <div className="view-page-card">
-        <h1 className="view-page-heading"> Exercises </h1>
+        <h1 className="view-page-heading"> Questionnaire </h1>
+        <Link to="/">
+          <button className="add-item-button">
+            <FontAwesomeIcon icon={faPlus} style={{ marginRight: "10px" }} />
+            Add New Question
+          </button>
+        </Link>
 
         <div className="data-table-div">
           <input

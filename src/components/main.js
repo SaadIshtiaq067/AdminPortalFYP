@@ -15,6 +15,8 @@ import Library from './library';
 import Item from './item';
 import Dashboard from './dashboard'
 import ViewExercise from './viewExercise';
+import ViewUsers from './viewUsers';
+import Complaints from './Complaints';
 
 
 
@@ -25,15 +27,15 @@ const Main = () => (
     <Route path="/alogin" component={AdminLogin} />
     <Route path="/contactus" component={ContactUs} />
     <Route path="/changep" component={ChangePassword} />
-    {/* <ProtectedRoute path="/pests" component={ProductTable} /> */}
     <ProtectedRoute path="/viewExercise" component={ViewExercise} />
     <Route path="/message" component={SendMessage} />
-    <ProtectedAdminRoute path="/viewUsers" component={Reservations} />
+    <ProtectedRoute path="/viewUsers" component={Reservations} />
     <ProtectedAdminRoute path="/edit/:type/:id" component={EditUser} />
     <Route path="/library" component={Library}/>
     <Route path="/item/:type/:id" component={Item}/>
     <ProtectedRoute path="/dashboard" component={Dashboard}/>
-    {/* <ProtectedRoute path="/editPlant/:id" component={}/> */}
+    <Route path="/viewUsers" component={ViewUsers} />
+    <ProtectedRoute path="/Complaints" component={Complaints} />
   </Switch>
 )
 

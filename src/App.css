@@ -162,11 +162,11 @@ h1, h2, h3, h4, h5, h6, p {
 }
 
 .view-page-heading{
-  font-family: Quicksand, Noto, sans-serif;
+  font-family: Arial, Helvetica, sans-serif;
   font-size: xx-large;
   font-weight: 700;
-  color: #009688;
-  border-bottom: 4px #009688 solid;
+  color: #110299;
+  border-bottom: 2px #110299 solid;
   width: 30%;
   margin-left: 5%;
   padding-bottom: 20px;
@@ -188,7 +188,7 @@ h1, h2, h3, h4, h5, h6, p {
 }
 
 .item-data-table div{
-  font-family: Quicksand, Noto, sans-serif;
+  font-family: Arial, Helvetica, sans-serif;
   font-weight: 500;
   font-size: medium;
 }
@@ -198,7 +198,7 @@ h1, h2, h3, h4, h5, h6, p {
 }
 
 Header{
-  font-family: Quicksand, Noto, sans-serif;
+  font-family: Arial, Helvetica, sans-serif;
 } */
 
  /* .footer p{  

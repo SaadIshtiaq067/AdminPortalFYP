@@ -22,24 +22,14 @@ function Complaints() {
 
   const columns = [
     {
-      name: "Pest Image",
-      selector: "pestImage",
-      cell: (row) => (
-        <div>
-          <img className="row-image" src={row.pestImage} alt={row.pestImage} />
-        </div>
-      ),
-      sortable: false,
-    },
-    {
-      name: "Pest Name",
-      selector: "pestName",
+      name: "Complaint by",
+      selector: "Complaint",
       sortable: true,
       maxWidth: "20%",
     },
     {
-      name: "Severity",
-      selector: "severity",
+      name: "Date",
+      selector: "Date",
       sortable: true,
     },
     {
@@ -49,29 +39,11 @@ function Complaints() {
       maxWidth: "5%",
       cell: (row) => (
         <div>
-          <Link to={"/item/pest/" + row._id}>
+          <Link to={"/" + row._id}>
             <button className="table-view-button table-button">
               <FontAwesomeIcon
                 className="view-icon table-button-icon"
                 icon={faEye}
-              />
-            </button>
-          </Link>
-        </div>
-      ),
-    },
-    {
-      name: "Edit",
-      selector: "editAction",
-      sortable: false,
-      maxWidth: "5%",
-      cell: (row) => (
-        <div>
-          <Link to={"/editPest/" + row._id}>
-            <button className="table-edit-button table-button">
-              <FontAwesomeIcon
-                className="view-icon table-button-icon"
-                icon={faPencilAlt}
               />
             </button>
           </Link>
@@ -105,10 +77,10 @@ function Complaints() {
   const deletePest = (id) => {
     console.log("Clicked");
     axios
-      .delete("https://smart-farming-backend.herokuapp.com/pest/" + id)
+      .delete("/" + id)
       .then((response) => {
         if (response.data.status == 1) {
-          alert.show("Pest Deleted Successfully");
+          alert.show("Complaint Deleted Successfully");
         } else {
           alert.show("Some Error Occured. Not Deleted");
         }
@@ -130,23 +102,11 @@ function Complaints() {
     );
   };
 
-  useEffect(() => {
-    axios
-      .get("https://smart-farming-backend.herokuapp.com/pest/")
-      .then((response) => {
-        setTodos(response.data.result);
-        setCurrentResults(response.data.result);
-        console.log(response.data);
-      })
-      .catch(function (error) {
-        console.log(error);
-      });
-  }, []);
 
   return (
     <div className="view-page-body">
       <div className="view-page-card">
-      <h1 className="view-page-heading"> Pest List</h1>
+      <h1 className="view-page-heading"> Complaints</h1>
 
       <div className="data-table-div">
         <input

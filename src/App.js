@@ -83,7 +83,7 @@ function App(props) {
           </Link>
           <Link to="/viewExercise">
             <FontAwesomeIcon icon={faTree} style={{ marginRight: "10px" }} />
-            Wxercises
+            Questionnaire
           </Link>
   
           <Link to="/viewUsers">
@@ -131,16 +131,12 @@ function App(props) {
           </Link>
           <Link to="/viewexercise">
             <FontAwesomeIcon icon={faTasks} style={{ marginRight: "10px" }} />
-            Exercises
+            Questionnaire
           </Link>
           <Link to="/Complaints">
             <FontAwesomeIcon icon={faBug} style={{ marginRight: "10px" }} />
             Complaints
           </Link>
-          {/* <Link to="/forum">
-            <FontAwesomeIcon icon={faComment} style={{ marginRight: "10px" }} />
-            Community
-          </Link> */}
           <Link to="/viewUsers">
             <FontAwesomeIcon icon={faUser} style={{ marginRight: "10px" }} />
             Patients
@@ -192,11 +188,11 @@ function App(props) {
           </Link>
 
           <Link to="/viewUsers">
-            <FontAwesomeIcon icon={faDatabase} /> View Plant Details{" "}
+            <FontAwesomeIcon icon={faDatabase} /> View Registered Users{" "}
           </Link>
       
           <Link to="/Complaints">
-            <FontAwesomeIcon icon={faDatabase} /> View Pest Details
+            <FontAwesomeIcon icon={faDatabase} /> View Complaints
           </Link>
 
   
@@ -215,7 +211,7 @@ function App(props) {
           
           title={
             
-            <Link to="/landing" style={{ textDecoration: "none", color: "White", fontWeight: 'bold', justifyContent: 'center', alignItems: 'center',}}>
+            <Link to="/" style={{ textDecoration: "none", color: "White", fontWeight: 'bold', justifyContent: 'center', alignItems: 'center',}}>
               
               {<img src={DA} alt="logo" style={{width:'50px',height:'50px'}} /> }   Dyslexia Aid Admin Panel
             </Link>
